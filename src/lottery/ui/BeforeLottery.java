@@ -4,16 +4,13 @@ import arc.Core;
 import arc.graphics.Color;
 import arc.input.KeyCode;
 import arc.scene.event.Touchable;
-import arc.scene.style.Drawable;
 import arc.scene.style.TextureRegionDrawable;
 import arc.scene.ui.Slider;
-import arc.scene.ui.layout.Table;
 import arc.struct.IntSeq;
 import arc.struct.Seq;
 import arc.util.Align;
-import arc.util.Time;
 import lottery.contents.LFx;
-import lottery.worlds.blocks.LotteryBlock;
+import lottery.worlds.blocks.LotteryBlock.LotteryBuild;
 import mindustry.ctype.UnlockableContent;
 import mindustry.gen.Icon;
 import mindustry.ui.Styles;
@@ -32,7 +29,7 @@ public class BeforeLottery extends BaseDialog {
         super("Lucky");
     }
 
-    public void show(Seq<UnlockableContent> us, Seq<Color> uc, IntSeq tier, LotteryBlock.mainBuild owner){
+    public void show(Seq<UnlockableContent> us, Seq<Color> uc, IntSeq tier, LotteryBuild owner){
         int i = getMaxIndex(tier);
         Color c = uc.get(i);
 

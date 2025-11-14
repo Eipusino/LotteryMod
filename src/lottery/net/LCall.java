@@ -10,7 +10,7 @@ public class LCall {
     public static void removeStack(Building build, Item item, int amount){
         buildRemoveStack(build, item, amount);
         if (Vars.net.server() || Vars.net.client()) {
-            removeStackPacket packet = new removeStackPacket();
+            RemoveStackPacket packet = new RemoveStackPacket();
 
             packet.build = build;
             packet.item = item;
@@ -20,7 +20,7 @@ public class LCall {
     }
     public static void removeStack(NetConnection con, Building build, Item item, int amount){
         if (Vars.net.server() || Vars.net.client()) {
-            removeStackPacket packet = new removeStackPacket();
+            RemoveStackPacket packet = new RemoveStackPacket();
 
             packet.build = build;
             packet.item = item;
@@ -36,6 +36,6 @@ public class LCall {
     }
 
     public static void registerPackets(){
-        Net.registerPacket(removeStackPacket::new);
+        Net.registerPacket(RemoveStackPacket::new);
     }
 }

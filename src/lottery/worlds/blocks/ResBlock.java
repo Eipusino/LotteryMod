@@ -6,11 +6,11 @@ import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.meta.BuildVisibility;
 
-public class resBlock extends Block {
+public class ResBlock extends Block {
     public Item res;
     public int amount;
 
-    public resBlock(Item item, int amount) {
+    public ResBlock(Item item, int amount) {
         super(item.name + "-lot-" + amount);
         buildVisibility = BuildVisibility.hidden;
         res = item;
